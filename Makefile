@@ -1,5 +1,3 @@
-setup: install
-
 install:
 	bundle install
 
@@ -8,5 +6,3 @@ test:
 
 lint:
 	bundle exec rubocop lib
-
-.PHONY: test
