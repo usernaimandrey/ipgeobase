@@ -1,3 +1,7 @@
+[![test and linter](https://github.com/usernaimandrey/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/usernaimandrey/ipgeobase/actions/workflows/main.yml)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/2ad4326041da37ea3825/maintainability)](https://codeclimate.com/github/usernaimandrey/ipgeobase/maintainability)
+
 # Ipgeobase
 
 *Ipgeobase* возвращает метаданные об IP. Гем содержит методы `config(service, format, client)` для конфигурирования и `lookup('8.8.8.8')`, который принимает IP-адрес и возвращает объект метаданных.
