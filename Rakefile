@@ -10,21 +10,10 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
-require "rubocop/rake_task"
-
-namespace :test do
-  desc 'Runs RuboCop on specified directories'
-
-  RuboCop::RakeTask.new(:rubocop) do |task|
-    # Dirs: app, lib, test
-    task.patterns = ['app/**/*.rb', 'lib/**/*.rb', 'test/**/*.rb']
-
-    # Make it easier to disable cops.
-    task.options << "--display-cop-names"
-
-    # Abort on failures (fix your code first)
-    task.fail_on_error = false
+begin
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new do |t|
+    t.options = ['--display-cop-names']
   end
+rescue LoadError
 end
-
-Rake::Task[:test].enhance ['test:rubocop']
