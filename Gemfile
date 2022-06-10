@@ -6,9 +6,20 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'addressable'
+
 gem 'nokogiri-happymapper'
-gem 'webmock'
-gem 'coveralls', require: false
-gem 'minitest', '~> 5.0'
+
 gem 'rake', '~> 13.0'
-gem 'rubocop', '~> 1.21'
+
+
+group :development do
+  gem 'rubocop', '~> 1.21'
+end
+
+group :test do
+  gem 'webmock'
+
+  gem 'coveralls', require: false
+
+  gem 'minitest', '~> 5.0'
+end

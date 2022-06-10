@@ -1,4 +1,4 @@
-[![test and linter](https://github.com/usernaimandrey/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/usernaimandrey/ipgeobase/actions/workflows/main.yml)
+[![test and linter](https://github.com/usernaimandrey/ipgeobase/actions/workflows/ruby.yml/badge.svg)](https://github.com/usernaimandrey/ipgeobase/actions/workflows/ruby.yml)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/2ad4326041da37ea3825/maintainability)](https://codeclimate.com/github/usernaimandrey/ipgeobase/maintainability)
 
