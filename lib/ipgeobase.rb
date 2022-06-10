@@ -3,27 +3,20 @@
 require_relative 'ipgeobase/version'
 
 module Ipgeobase
-  class Error < StandardError; end
-
   autoload :Parser, 'ipgeobase/parser'
   autoload :HttpClient, 'ipgeobase/http_client'
   autoload :Url, 'ipgeobase/url'
 
   class << self
     def lookup(ip)
-      template = "http://#{@service}{/#{@format}}{/ip}"
-      url = Url.new(template).expand({
-                                       'xml' => @format,
-                                       'ip' => ip
-                                     })
-      req = HttpClient.new(@client).get(url)
-      Parser.new(req)
+      url = url(ip)
+      req_xml = HttpClient.get(url)
+      Parser.parse(req_xml)
     end
 
-    def config(service, format, client)
-      @service = service
-      @format = format
-      @client = client
+    def url(ip)
+      template = 'http://ip-api.com/xml{/ip}'
+      Url.new(template).expand({ 'ip' => ip })
     end
   end
 end

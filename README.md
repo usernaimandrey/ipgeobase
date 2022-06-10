@@ -4,7 +4,7 @@
 
 # Ipgeobase
 
-*Ipgeobase* возвращает метаданные об IP. Гем содержит методы `config(service, format, client)` для конфигурирования и `lookup('8.8.8.8')`, который принимает IP-адрес и возвращает объект метаданных.
+*Ipgeobase* возвращает метаданные об IP. Гем содержит метод `lookup('8.8.8.8')`, который принимает IP-адрес и возвращает объект метаданных.
 
 В метаданных содержатся следующие поля:
 
@@ -31,11 +31,6 @@ require "ipgeobase"
 
 ip = '8.8.8.8'
 
-service = 'ip-api.com'
-format = 'xml'
-client = Ipgeobase::HttpClient.new(Net::HTTP)
-
-Ipgeobase.config(service, format, client)
 ip_meta = Ipgeobase.lookup(ip)
 
 ip_meta = Ipgeobase.lookup('8.8.8.8')

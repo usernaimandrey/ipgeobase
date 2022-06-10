@@ -6,10 +6,6 @@ module Ipgeobase
   class Parser
     include HappyMapper
 
-    def initialize(xml)
-      parse(xml)
-    end
-
     tag 'query'
     element :city, String, tag: 'city'
     element :country, String, tag: 'country'
