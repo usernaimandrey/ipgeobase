@@ -8,7 +8,7 @@ require 'minitest/autorun'
 
 require 'webmock/minitest'
 
-if ENV["TRAVIS"]
+if ENV['TRAVIS']
   require 'coveralls'
   Coveralls.wear!
 end

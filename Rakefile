@@ -17,7 +17,7 @@ end
 #   end
 # rescue LoadError
 # end
-require "rubocop/rake_task"
+require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new
 
