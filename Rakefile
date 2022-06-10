@@ -9,14 +9,6 @@ Rake::TestTask.new(:test) do |t|
   t.test_files = FileList['lib/**/test_*.rb']
 end
 
-# begin
-#   require 'rubocop/rake_task'
-#   RuboCop::RakeTask.new do |t|
-#     t.options = ['--display-cop-names']
-#   end
-# rescue LoadError
-# end
-
 require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new do |task|
