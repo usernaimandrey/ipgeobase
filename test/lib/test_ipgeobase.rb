@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require_relative '../lib/ipgeobase'
-require_relative '../lib/ipgeobase/url'
+require_relative '../../lib/ipgeobase'
 
 class TestIpgeobase < Minitest::Test
   def setup
@@ -15,10 +14,10 @@ class TestIpgeobase < Minitest::Test
 
   def test_ipgeobase
     req = Ipgeobase.lookup(@ip)
-    assert(req.city == 'Ashburn')
-    assert(req.country == 'United States')
-    assert(req.countryCode == 'US')
-    assert(req.lat == '39.03')
-    assert(req.lon == '-77.5')
+    assert_equal('Ashburn', req.city)
+    assert_equal('United States', req.country)
+    assert_equal('US', req.countryCode)
+    assert_equal('39.03', req.lat)
+    assert_equal('-77.5', req.lon)
   end
 end
