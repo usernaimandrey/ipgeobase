@@ -17,8 +17,3 @@ end
 #   end
 # rescue LoadError
 # end
-require 'rubocop/rake_task'
-
-RuboCop::RakeTask.new
-
-task default: %i[test rubocop]
