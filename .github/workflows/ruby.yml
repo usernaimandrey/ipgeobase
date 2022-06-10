@@ -24,11 +24,8 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
 
-    - name: Install
+    - name: Install dependencies
       run: make install
 
-    - name: Run linter
-      run: make lint
-
-    - name: Run tests
+    - name: Run tests and linter
       run: bundle exec rake
