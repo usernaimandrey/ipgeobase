@@ -6,3 +6,5 @@ test:
 
 lint:
 	bundle exec rubocop lib
+
+.PHONY: test
